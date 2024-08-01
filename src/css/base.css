@@ -1,0 +1,64 @@
+
+/*
+ * Please don't modify this file, use main.css instead.
+ * @author Peter Sommerhoff<peter@petersommerhoff.com>
+ */
+
+* {
+  color: #fff;
+  text-shadow: 1px 1px 0 #000;
+  box-sizing: border-box;
+  font-family: Ubuntu, Helvetica, Verdana, Arial, sans-serif;
+}
+
+html {
+  background: linear-gradient(-10deg, #ADD100, #7B920A);
+  min-height: 100vh;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2.2rem;
+  padding: 5rem;
+}
+
+code {
+  margin: 0.1rem 0.5rem;
+  padding: 0.2rem 0.5rem 0.1rem 0.5rem;
+  font-family: monospace;
+  border-radius: 0.2rem;
+  border: 1px dotted #fff;
+}
+
+p {
+  margin: 2.5rem 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.outlined {
+  height: 2rem;
+  border: 1px solid #fff;
+  margin-bottom: 5rem;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

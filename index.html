@@ -44,6 +44,7 @@
   <link rel="manifest" href="./manifest.json">
 
   <!-- css -->
+  <link rel="stylesheet" href="./src/css/base.css">
   <link rel="stylesheet" href="./src/css/main.css">
 
   <!-- HTML5 element support for IE6-8 -->
@@ -70,11 +71,20 @@
       Skip to main content
     </a>
 
-    <header></header>
+    <section class="page__intro">
+      <h1>Ultimate CSS Grid Course</h1>
+      <p>This is the template you can use to follow along the course.</p>
+    </section>
 
-    <main id="mainContent"></main>
+    <section class="page__grid">
+      <header class="page__header page__border header">Header</header>
 
-    <footer></footer>
+      <main id="mainContent" class="page__content page__border content">Main Content goes here</main>
+  
+      <aside class="page__relatedContent page__border relatedContent">Related contnt goes here</aside>
+  
+      <footer class="page__footer page__border footer">Footer</footer>
+    </section>
   </section>
 
   <!-- common js file -->
