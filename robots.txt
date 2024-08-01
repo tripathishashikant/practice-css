@@ -1,0 +1,6 @@
+User-Agent: *
+Disallow: /src/assets/css/
+Disallow: /src/assets/js/
+Disallow: /src/assets/images/
+Disallow: /src/scss/
+Disallow: /src/js/
