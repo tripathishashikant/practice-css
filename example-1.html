@@ -27,7 +27,6 @@
     <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
   <!-- Global site tag - Google Analytics -->
-    
 </head>
 
 <body id="homepage" class="homepage">
@@ -51,15 +50,58 @@
       <p>This is the template you can use to follow along the course.</p>
     </section>
 
-    <section class="page__grid">
-      <header class="page__header header box">Header</header>
+    <div class="grid">
+      <div class="box a">A</div>
 
-      <main id="mainContent" class="page__content content box">Main Content goes here</main>
+      <div class="box b">B</div>
   
-      <aside class="page__relatedContent relatedContent box">Related contnt goes here</aside>
+      <div class="box c">C</div>
   
-      <footer class="page__footer footer box">Footer</footer>
-    </section>
+      <div class="box d">D</div>
+
+      <div class="box e">E</div>
+
+      <div class="box f">F</div>
+    </div>
   </section>
+
+  <style>
+    .grid {
+      display: grid;
+      grid-template-rows: auto auto;
+      grid-template-columns: auto auto auto;
+      grid-gap: 1rem;
+    }
+
+    .a {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+    }
+
+    .b {
+      grid-row: 1 / 2;
+      grid-column: 2 / 3;
+    }
+
+    .c {
+      grid-row: 1 / 2;
+      grid-column: 3 / 4;
+    }
+
+    .d {
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+    }
+
+    .e {
+      grid-row: 2 / 3;
+      grid-column: 2 / 3;
+    }
+
+    .f {
+      grid-row: 2 / 3;
+      grid-column: 3 / 4;
+    }
+  </style>
 </body>
 </html>
