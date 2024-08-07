@@ -46,8 +46,10 @@
     </a>
 
     <section class="page__intro">
-      <h1>Ultimate CSS Grid Course</h1>
-      <p>This is the template you can use to follow along the course.</p>
+      <h1>Defining a Grid</h1>
+      <p>To define a Grid use display:grid or display:inline-grid on the parent element. You can then create a grid using the grid-template-columns and grid-template-rows properties.</p>
+      <p>I am using the grid-gap property to create a gap between my columns and rows of 10px. This property is a shorthand for grid-column-gap and grid-row-gap so you can set these values individually.</p>
+      <p>All direct children of the parent now become grid items and the auto-placement algorithm lays them out, one in each grid cell. Creating extra rows as needed.</p>
     </section>
 
     <div class="grid">
@@ -68,8 +70,6 @@
   <style>
     .grid {
       display: grid;
-      grid-template-rows: auto;
-      grid-template-columns: auto;
       grid-gap: 1rem;
     }
 
@@ -77,36 +77,31 @@
       .grid {
         grid-template-rows: auto auto;
         grid-template-columns: auto auto auto;
+        grid-template-areas: "a b c" "d e f";
       }
       
       .a {
-        grid-row: 1 / 2;
-        grid-column: 1 / 2;
+        grid-area: a;
       }
 
       .b {
-        grid-row: 1 / 2;
-        grid-column: 2 / 3;
+        grid-area: b;
       }
 
       .c {
-        grid-row: 1 / 2;
-        grid-column: 3 / 4;
+        grid-area: c;
       }
 
       .d {
-        grid-row: 2 / 3;
-        grid-column: 1 / 2;
+        grid-area: d;
       }
 
       .e {
-        grid-row: 2 / 3;
-        grid-column: 2 / 3;
+        grid-area: e;
       }
 
       .f {
-        grid-row: 2 / 3;
-        grid-column: 3 / 4;
+        grid-area: f;
       }
     }
   </style>
