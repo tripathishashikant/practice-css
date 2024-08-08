@@ -70,11 +70,15 @@
   <style>
     .grid {
       display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: auto;
       grid-gap: 1rem;
     }
 
     @media (width > 991px) {
       .grid {
+        grid-template-rows: repeat(2, 50%);
+        grid-template-columns: repeat(3, calc(100% / 3));
         grid-template-areas: "a b c" "d e f";
       }
       
