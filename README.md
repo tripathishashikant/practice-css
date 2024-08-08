@@ -1,2 +1,2 @@
 # practice-css
-To practice CSS
+I have created this repository to practice CSS features.
