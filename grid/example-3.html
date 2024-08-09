@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <title>Project Template - Example 2</title>
+  <title>Project Template - Example 3</title>
 
   <!-- meta tags -->
   <meta charset="UTF-8">
@@ -29,7 +29,7 @@
   <!-- Global site tag - Google Analytics -->
 </head>
 
-<body id="example2" class="example2">
+<body id="example3" class="example3">
 
   <section class="page">
 
@@ -46,8 +46,9 @@
     </a>
 
     <section class="page__intro">
-      <h1>Line-based placement</h1>
-      <p>I am positioning the elements in my markup (six divs with a class of box and classes from a to f) using line-based placement properties. This example is more verbose than it needs to be as a demonstration of the properties. In reality if an item will only span one grid track you may omit the -end value.</p>
+      <h1>Line-based placement spanning tracks</h1>
+      <p>To create Grid Areas that are larger than a single grid track we specify an end line that is more than one track away.</p>
+      <p>Here I am using the grid-column and grid-row shorthand and have omitted the end value for any items that span one row or column track.</p>
     </section>
 
     <div class="grid">
@@ -58,10 +59,6 @@
       <div class="box c">C</div>
   
       <div class="box d">D</div>
-
-      <div class="box e">E</div>
-
-      <div class="box f">F</div>
     </div>
   </section>
 
@@ -70,7 +67,7 @@
       display: grid;
       grid-template-rows: auto;
       grid-template-columns: auto;
-      grid-template-areas: "D" "A" "F" "E" "B" "C";
+      grid-template-areas: "A" "B" "C" "D";
       grid-gap: 1rem;
     }
 
@@ -89,20 +86,12 @@
     .d {
       grid-area: D;
     }
-
-    .e {
-      grid-area: E;
-    }
-
-    .f {
-      grid-area: F;
-    }
     
     @media (width > 991px) {  
       .grid {
-        grid-template-rows: repeat(2, 50%);
-        grid-template-columns: repeat(3, calc(100% / 3));
-        grid-template-areas: "D A F" "E B C";
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(3, auto);
+        grid-template-areas: "A A B" "C D B";
       }
     }
   </style>
