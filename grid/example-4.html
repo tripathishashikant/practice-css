@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Project Template - Example 4</title>
+
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Practicing CSS for learning new feature">
+  <meta name="Keyword" content="CSS, CSS3, Practice">
+  <meta name="author" content="Shashikant">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-title" content="CSS Practice">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+  <!-- css -->
+  <link rel="stylesheet" href="./../css/base.css">
+  <link rel="stylesheet" href="./../css/main.css"> 
+
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <!-- Global site tag - Google Analytics -->
+</head>
+
+<body id="example4" class="example4">
+
+  <section class="page">
+
+    <!-- when javascript is disabled use below script to notify user and 
+         style any hidden element which is not visible due to js functionality  -->
+    <noscript>
+      <style></style>
+      <h1>Sorry, your browser does not support JavaScript!</h1>
+    </noscript>
+
+    <!-- skip to mail content -->
+    <a href="#mainContent" class="visually-hidden">
+      Skip to main content
+    </a>
+
+    <section class="page__intro">
+      <h1>Line-based placement with spans</h1>
+      <p>You can give lines the same name and then use the span keyword to target lines of a certain name. This is really useful if you want to create a complex grid with multiple content tracks and gutters.</p>
+    </section>
+
+    <div class="grid">
+      <div class="box a">A</div>
+
+      <div class="box b">B</div>
+  
+      <div class="box c">C</div>
+  
+      <div class="box d">D</div>
+
+      <div class="box e">E</div>
+    </div>
+  </section>
+
+  <style>
+    .grid {
+      display: grid;
+      grid-gap: 1rem;
+    }
+    
+    @media (width > 991px) {  
+      .grid {
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(4, auto);
+      }
+      
+
+      .a {
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 2;
+      }
+
+      .b {
+        grid-row: 1 / span 1;
+        grid-column: 3 / span 2;
+      }
+
+      .c {
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 1;
+      }
+
+      .d {
+        grid-row: 2 / span 1;
+        grid-column: 2 / span 3;
+      }
+
+      .e {
+        grid-row: 3 / span 1;
+        grid-column: 1 / span 4;
+      }
+    }
+  </style>
+</body>
+</html>
