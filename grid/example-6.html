@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <title>Project Template - Example 5</title>
+  <title>Project Template - Example 6</title>
 
   <!-- meta tags -->
   <meta charset="UTF-8">
@@ -29,7 +29,7 @@
   <!-- Global site tag - Google Analytics -->
 </head>
 
-<body id="example5" class="example5">
+<body id="example6" class="example6">
 
   <section class="page">
 
@@ -46,16 +46,16 @@
     </a>
 
     <section class="page__intro">
-      <h1>Defining Grid Areas</h1>
-      <p>We can create named areas on the grid to put content into. To do this we first assign elements in our markup to a Grid Area, using the grid-area property.</p>
-      <p>We can then use the grid-template-areas property to describe where on the Grid these elements should sit.</p>
-      <p>Repeating the name of an area indicates that the area spans that grid track. Using a . or a sequence like .... indicates an empty track. Such as the very first cell on this grid.</p>
+      <h1>No clearing required</h1>
+      <p>If I add a footer to my markup and define a grid-area and place it on the grid using grid-template-areas you can see that it sits below the content column. There is no clearing required as this footer has a track on the grid, it can’t hop up into another track.</p>
+      <p>We can then use the grid-template-areas property to describe where on the Grid these elements should sit.This example also shows the issue described in example 5, by default the background on the sidebar should stretch to full height, in a similar way to the defaults for Flexbox.</p>
     </section>
 
     <div class="grid">
       <div class="box header">Header</div>
       <div class="box sidebar">Sidebar</div>
-      <div class="box content">Content</div>
+      <div class="box content">Content <br /> More content than we had before so this column is now quite tall. More content than  we had before so this column is now quite tall. More content than we had before so this column is now quite tall.</div>
+      <div class="box footer">Footer</div>
     </div>
   </section>
 
@@ -67,9 +67,9 @@
     
     @media (width > 991px) {  
       .grid {
-        grid-template-rows: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
         grid-template-columns: repeat(3, auto);
-        grid-template-areas: "... header header" "sidebar content content";
+        grid-template-areas: "... header header" "sidebar content content" "footer footer footer";
       }
 
       .header {
@@ -82,6 +82,10 @@
 
       .content {
         grid-area: content;
+      }
+
+      .footer {
+        grid-area: footer;
       }
     }
   </style>
