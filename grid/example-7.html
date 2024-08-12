@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <title>Project Template - Example 5</title>
+  <title>Project Template - Example 7</title>
 
   <!-- meta tags -->
   <meta charset="UTF-8">
@@ -29,7 +29,7 @@
   <!-- Global site tag - Google Analytics -->
 </head>
 
-<body id="example5" class="example5">
+<body id="example7" class="example7">
 
   <section class="page">
 
@@ -46,42 +46,53 @@
     </a>
 
     <section class="page__intro">
-      <h1>Defining Grid Areas</h1>
-      <p>We can create named areas on the grid to put content into. To do this we first assign elements in our markup to a Grid Area, using the grid-area property.</p>
-      <p>We can then use the grid-template-areas property to describe where on the Grid these elements should sit.</p>
-      <p>Repeating the name of an area indicates that the area spans that grid track. Using a . or a sequence like .... indicates an empty track. Such as the very first cell on this grid.</p>
+      <h1>Redefining Grid Areas with Media Queries</h1>
+      <p>We can easily redefine the grid and the position of the elements on it using Media Queries. I define the Grid Areas as before outside of the Media Queries and then redefine the Grid Tracks and the position of the elements onto that grid inside my Media Queries.</p>
     </section>
 
     <div class="grid">
       <div class="box header">Header</div>
       <div class="box sidebar">Sidebar</div>
-      <div class="box content">Content</div>
+      <div class="box sidebar2">Sidebar 2</div>
+      <div class="box content">Content <br /> More content than we had before so this column is now quite tall. More content than  we had before so this column is now quite tall. More content than we had before so this column is now quite tall.</div>
+      <div class="box footer">Footer</div>
     </div>
   </section>
 
   <style>
     .grid {
       display: grid;
+      grid-template-rows: repeat(4, auto);
+      grid-template-columns: 100px auto;
+      grid-template-areas: "header header" "sidebar content" "sidebar2 sidebar2" "footer footer";
       grid-gap: 1rem;
+    }
+
+    .header {
+      grid-area: header;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+    }
+
+    .content {
+      grid-area: content;
+    }
+
+    .sidebar2 {
+      grid-area: sidebar2;
+    }
+
+    .footer {
+      grid-area: footer;
     }
     
     @media (width > 991px) {  
       .grid {
-        grid-template-rows: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
         grid-template-columns: repeat(3, auto);
-        grid-template-areas: "... header header" "sidebar content content";
-      }
-
-      .header {
-        grid-area: header;
-      }
-
-      .sidebar {
-        grid-area: sidebar;
-      }
-
-      .content {
-        grid-area: content;
+        grid-template-areas: "header header header" "sidebar content sidebar2" "footer footer footer";
       }
     }
   </style>
